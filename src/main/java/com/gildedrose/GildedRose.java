@@ -18,6 +18,7 @@ class GildedRose {
         updaters.put("Aged Brie", new AgedBrieUpdater());
         updaters.put("Backstage passes to a TAFKAL80ETC concert", new BackstagePassUpdater());
         updaters.put("Sulfuras, Hand of Ragnaros", new SulfurasUpdater());
+        updaters.put("Conjured", new ConjuredItemUpdater());
     }
 
     public void updateQuality() {

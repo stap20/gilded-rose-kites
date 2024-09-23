@@ -133,4 +133,19 @@ class GildedRoseTest {
             assertEquals(expectedQuality[i], app.items[i].quality);
         }
     }
+
+    @Test
+    void shouldHandleConjuredItems() {
+        Item[] items = new Item[] {
+            new Item("Conjured", 3, 6), 
+            new Item("Conjured", 0, 6), 
+            new Item("Normal Item", 3, 6) 
+        };
+
+        GildedRose app = setupAndUpdate(items);
+
+        assertEquals(4, app.items[0].quality); 
+        assertEquals(4, app.items[1].quality); 
+        assertEquals(5, app.items[2].quality); 
+    }
 }
