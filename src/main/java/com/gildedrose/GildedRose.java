@@ -1,6 +1,7 @@
 package com.gildedrose;
 
 class GildedRose {
+
     Item[] items;
 
     public GildedRose(Item[] items) {
@@ -18,13 +19,11 @@ class GildedRose {
                         items[i].quality = items[i].quality - 1;
                     }
                 }
-            }     
-            
-            //will increase if quality less than 50
+            } //will increase if quality less than 50
             else {
                 if (items[i].quality < 50) {
                     items[i].quality = items[i].quality + 1;
-                    
+
                     //handle for another case if backstage -> (sellin <= 10 increase over the previous now is 2) | (sellin ) 
                     if (items[i].name.equals("Backstage passes to a TAFKAL80ETC concert")) {
                         if (items[i].sellIn < 11) {
